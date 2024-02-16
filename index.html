@@ -20,11 +20,25 @@
     </head>
 
     <body>
+        <div class="container">
         <header>
             <!-- place header here -->
             <h1>Rock Paper Scissors</h1>
         </header>
-        <main></main>
+        <main>
+            <h2 class="justify-content-cente">Score</h2>
+            <div class="row justify-content-center my-3">
+                <div class="col-5" id ="box">
+                    <h3>Player's Choice</h3>
+                </div>
+                <div class="col-5" id ="box">
+                    <h3>Computer's Choice</h3>
+                </div>
+            </div>
+            <button class="option"><img class="img" src="images/paper.png"></button>
+            <button class="option"><img class="img" src="images/rock.png"></button>
+            <button class="option"><img class="img" src="images/scissors.png"></button>
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
@@ -41,5 +55,6 @@
             crossorigin="anonymous"
         ></script>
         <script src="script.js"></script>
+    </div>
     </body>
 </html>
