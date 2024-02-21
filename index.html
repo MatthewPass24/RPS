@@ -17,29 +17,35 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="style.css">
+        <!--Font links-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
         <div class="container">
         <header>
             <!-- place header here -->
-            <h1>Rock Paper Scissors</h1>
+            <h1><b>Rock, Paper, Scissors!</b></h1>
         </header>
         <main>
-            <h2 class="justify-content-center">Scores<br> 0-0</h2>
+            <h2 class="justify-content-center">Score:<br><div id="playerScore"> 0</div>-<div id="computerScore">0</div></h2>
             <div class="row justify-content-center my-3">
-                <div class="col-5" id ="box">
-                    <h3>You</h3>
+                <div class="player col-5" id ="box">
+                    <div class="title"><h3>You</h3></div>
                     <img class="img" src="images/paper.png">
                 </div>
-                <div class="col-5" id ="box">
-                    <h3>Computer</h3>
+                <div class="comp col-5" id ="box">
+                    <div class="title"><h3>Computer</h3></div>
                     <img class="img" src="images/paper.png">
                 </div>
             </div>
-            <button class="option"><img class="img" src="images/paper.png"></button>
-            <button class="option"><img class="img" src="images/rock.png"></button>
-            <button class="option"><img class="img" src="images/scissors.png"></button>
+            <button class="option" onclick="chooseObj('paper')"><img class="img" src="images/paper.png"></button>
+            <button class="option" onclick="chooseObj('rock')"><img class="img" src="images/rock.png"></button>
+            <button class="option" onclick="chooseObj('scissors')"><img class="img" src="images/scissors.png"></button>
+            <h2>Play Again:</h2><img class="reload" src="images/reload.png">
         </main>
         <footer>
             <!-- place footer here -->
