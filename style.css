@@ -20,12 +20,12 @@ header {
     background-color: rgb(187, 36, 36);
 }
 .img {
-    height: 80px;
-    width: 80px;
+    height: 5em;
+    width: 5em;
 }
 .img1 {
-    height: 120px;
-    width: 120px;
+    height: 8em;
+    width: 8em;
 }
 .reload {
     height: 4em;
@@ -70,8 +70,7 @@ h3 {
     padding: 0.5rem 0.5rem;
     vertical-align: middle;
   }
-  .reset button{
-  }
+
   button {
     border: none;
     border-radius: 100%;

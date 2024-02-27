@@ -8,7 +8,7 @@ window.onload = (event) => {
     document.getElementById('response-text').innerText = 'Please enter your name'
     document.getElementById('response-text').classList = 'Display text-light h3'
   }
-  
+
   if (!userName.trim()) {
     alert('Please enter a name!')
     userName = prompt('Enter your name')
@@ -17,38 +17,39 @@ window.onload = (event) => {
 };
 
 
-let message = `Congratulations, ${userName} you won the game.`
 
-let objArray = ["rock", "paper", "scissors",]
-
-function playRound(userSelection) {
-  const computerChoice = objArray[Math.floor(Math.random() * 3)]
-  let result = "";
-
-  if(userSelection === computerChoice){
-    result = "It's a tie!"
+function playRound(playerChoice) {
+  const options = ['rock', 'paper', 'scissors'];
+  const computerChoice = options[Math.floor(Math.random() * 3)]
+  if(playerChoice === 'rock') {
+    document.getElementById('response-image').src = 'images/rock.png'
+  }
+  if(playerChoice === 'paper') {
+    document.getElementById('response-image').src = 'images/paper.png'
+  }
+  if(playerChoice === 'scissors') {
+    document.getElementById('response-image').src = 'images/scissors.png'
   }
 
-  else{
-    switch(userSelection){
-      case 0:
-        return 'rock';
-      case 1:
-        return 'paper';
-      case 2:
-        return 'scissors';
-    }
+  if (computerChoice === 'rock') {
+    document.getElementById('response-image').src = 'images/rock.png'
   }
+  if (computerChoice === 'paper') {
+    document.getElementById('response-image').src = 'images/paper.png'
+  }
+  if (computerChoice === 'scissors') {
+    document.getElementById('response-image').src = 'images/scissors.png'
+  }
+
+  let outcome
+  if (playerChoicee === computerChoice) {
+    outcome = "It's a tie!"
+  } else if ((playerChoice === 'rock' && computerChoice === 'scissors') ||
+    (playerChoice === 'paper' && computerChoice === 'rock') ||
+    (playerChoice === 'scissors' && computerChoice === 'paper')) {
+    outcome = "You win!";
+  } else {
+    outcome = "Computer wins!";
+  }
+
 }
-  
-const getComputerChoice = () => {
-  const randomNumber = Math.floor(Math.random() * 3);
-  switch (randomNumber) {
-    case 0:
-      return 'rock';
-    case 1:
-      return 'paper';
-    case 2:
-      return 'scissors';
-  }
-};
