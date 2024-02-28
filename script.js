@@ -63,3 +63,7 @@ playerScoreElement.textContent = playerScore;
 computerScoreElement.textContent = computerScore;
 roundsplayedElement.textContent = `Rounds played: ${roundsPlayed}`
 }
+document.getElementById("reset").addEventListener("click", function() {
+  // Reload the page
+  location.reload();
+})
