@@ -7,7 +7,7 @@ header {
 }
 .option {
     border-radius: 50%;
-    background-color: rgb(216, 126, 126);
+    background-color: rgba(108, 125, 187, 0.548);
     box-shadow: 0 4px 5px 0 #050505a4;
     margin: 1em;
     border: none;
@@ -20,8 +20,8 @@ header {
     background-color: rgb(187, 36, 36);
 }
 .img {
-    height: 5em;
-    width: 5em;
+    height: 4em;
+    padding: 0.5em;
 }
 .img1 {
     height: 8em;
@@ -69,6 +69,16 @@ h3 {
     display: inline-block;
     padding: 0.5rem 0.5rem;
     vertical-align: middle;
+  }
+
+  #playerScore {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  
+  #ComputerScore {
+    font-size: 2em;
+    font-weight: 700;
   }
 
   button {

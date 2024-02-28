@@ -59,15 +59,22 @@
                 </div>
             </div>
 
-            <button class="option" onclick="playRound('rock')"><img class="img" src="images/rock.png"></button>
-            <button class="option" onclick="playRound('paper')"><img class="img" src="images/paper.png"></button>
-            <button class="option" onclick="playRound('scissors')"><img class="img" src="images/scissors.png"></button>
+            <button class="option" onclick="playRound('rock')"><img class="img" src="images/Rock-Flat-icon.png"></button>
+            <button class="option" onclick="playRound('paper')"><img class="img" src="images/Page-With-Curl-Emoji.png"></button>
+            <button class="option" onclick="playRound('scissors')"><img class="img" src="images/scissors1.png"></button>
             <div class='parent'>
                 <div class="child">
                     <h2>Restart Game:</h2>
                 </div>
-                <div class='child'><button class="reset" onclick="reset()"><img class="reload" src="images/reload.png"></button></div>
+                <div class='child'><button class="reset" id="reset" onclick="reset()"><img class="reload" src="images/reload.png"></button></div>
             </div>
+            <script>
+                // Add event listener to the button
+                document.getElementById("reset").addEventListener("click", function() {
+                  // Reload the page
+                  location.reload();
+                });
+              </script>
         </main>
 
         <!-- Bootstrap JavaScript Libraries -->
@@ -81,7 +88,7 @@
         <script src="script.js"></script>
     </div>        
     <!-- place footer here -->
-    <footer class="text-center text-white" style="background-color: rgba(107, 151, 233, 0.2)">
+    <footer class="text-center text-white" style="background-color: rgba(100, 142, 219, 0.226)">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
           <section class="mb-4">
@@ -94,7 +101,7 @@
         <!-- Grid container -->
       
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(58, 114, 218, 0.2);">
+        <div class="text-center p-3" style="background-color: rgba(108, 125, 187, 0.548);;">
           <a class="text-white" href="https://mdbootstrap.com/">Matthew Passantino</a>
         </div>
         <!-- Copyright -->

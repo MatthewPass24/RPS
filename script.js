@@ -2,10 +2,7 @@ window.onload = (event) => {
   let userName = prompt("Enter your name");
 
   if (userName === null) {
-    document.getElementById("response-text").innerText =
-      "Please enter your name";
-    document.getElementById("response-text").classList =
-      "Display text-light h3";
+    userName = prompt('Please enter your name:')
   }
 
   if (!userName.trim()) {
@@ -27,23 +24,23 @@ function playRound(playerChoice) {
   const options = ["rock", "paper", "scissors"];
   const computerChoice = options[Math.floor(Math.random() * 3)];
   if (playerChoice === "rock") {
-    document.getElementById("change-image").src = "images/rock.png";
+    document.getElementById("change-image").src = "images/Rock-Flat-icon.png";
   }
   if (playerChoice === "paper") {
-    document.getElementById("change-image").src = "images/paper.png";
+    document.getElementById("change-image").src = "images/Page-With-Curl-Emoji.png";
   }
   if (playerChoice === "scissors") {
-    document.getElementById("change-image").src = "images/scissors.png";
+    document.getElementById("change-image").src = "images/scissors1.png";
   }
 
   if (computerChoice === "rock") {
-    document.getElementById("response-image").src = "images/rock.png";
+    document.getElementById("response-image").src = "images/Rock-Flat-icon.png";
   }
   if (computerChoice === "paper") {
-    document.getElementById("response-image").src = "images/paper.png";
+    document.getElementById("response-image").src = "images/Page-With-Curl-Emoji.png";
   }
   if (computerChoice === "scissors") {
-    document.getElementById("response-image").src = "images/scissors.png";
+    document.getElementById("response-image").src = "images/scissors1.png";
   }
   if (playerChoice === computerChoice) {
     outcomeElement.textContent = "It's a tie!";
