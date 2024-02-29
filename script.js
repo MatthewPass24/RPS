@@ -1,3 +1,4 @@
+// enter username prompt
 window.onload = (event) => {
   let userName = prompt("Enter your name");
 
@@ -11,6 +12,12 @@ window.onload = (event) => {
   }
   document.getElementById("response-text").innerText = `${userName}`;
 };
+
+let victory = ["Congratulations, you won against the computer!"]
+let loss = ['Not so lucky this time, the computer got the upper hand!']
+let tie = ["It's a tie game! Try again if you want to win"]
+
+// variables
 const playerScoreElement = document.getElementById('playerScore');
 const computerScoreElement = document.getElementById('ComputerScore');
 const outcomeElement = document.getElementById('outcome');
@@ -20,6 +27,7 @@ let playerScore = 0;
 let computerScore = 0;
 let roundsPlayed = 0;
 
+//function to play game
 function playRound(playerChoice) {
   const options = ["rock", "paper", "scissors"];
   const computerChoice = options[Math.floor(Math.random() * 3)];
@@ -63,7 +71,13 @@ playerScoreElement.textContent = playerScore;
 computerScoreElement.textContent = computerScore;
 roundsplayedElement.textContent = `Rounds played: ${roundsPlayed}`
 }
+// Reload the page
 document.getElementById("reset").addEventListener("click", function() {
-  // Reload the page
+
   location.reload();
 })
+if (playerScore === 5 && computerScore === 5){ // removes buttons once round 5 is reached
+  document.getElementById('rock').classList.toggle('d-none');
+  document.getElementById('paper').classList.toggle('d-none');
+  document.getElementById('scissor').classList.toggle('d-none');
+}
