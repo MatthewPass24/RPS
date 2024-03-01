@@ -13,19 +13,16 @@ window.onload = (event) => {
   document.getElementById("response-text").innerText = `${userName}`;
 };
 
-let victory = ["Congratulations, you won against the computer!"]
-let loss = ['Not so lucky this time, the computer got the upper hand!']
-let tie = ["It's a tie game! Try again if you want to win"]
+let playerScore = 0;
+let computerScore = 0;
+let roundsPlayed = 0;
+let totalRounds = 5; // Define the total number of rounds
 
 // variables
 const playerScoreElement = document.getElementById('playerScore');
 const computerScoreElement = document.getElementById('ComputerScore');
 const outcomeElement = document.getElementById('outcome');
-let roundsplayedElement = document.getElementById('roundsPlayed')
-
-let playerScore = 0;
-let computerScore = 0;
-let roundsPlayed = 0;
+let roundsplayedElement = document.getElementById('roundsPlayed');
 
 //function to play game
 function playRound(playerChoice) {
@@ -52,7 +49,6 @@ function playRound(playerChoice) {
   }
   if (playerChoice === computerChoice) {
     outcomeElement.textContent = "It's a tie!";
-    roundsPlayed++;
 } else if (
     (playerChoice === 'rock' && computerChoice === 'scissors') ||
     (playerChoice === 'paper' && computerChoice === 'rock') ||
@@ -61,23 +57,52 @@ function playRound(playerChoice) {
 ) {
     outcomeElement.textContent = 'You win!';
     playerScore++; 
-    roundsPlayed++;
+
 } else {
     outcomeElement.textContent = 'You lose!';
     computerScore++;
-    roundsPlayed++;
+
 }
 playerScoreElement.textContent = playerScore;
 computerScoreElement.textContent = computerScore;
-roundsplayedElement.textContent = `Rounds played: ${roundsPlayed}`
+
+// Increase rounds played
+roundsPlayed++;
+
+// Display total rounds played
+roundsplayedElement.textContent = `Round ${roundsPlayed}`;
+
+// Check if all rounds played
+if (roundsPlayed === totalRounds) {
+    endGame();
 }
+
+}
+
+function endGame() {
+
+  // Hide the Buttons 
+  document.getElementById('choices').style.display = 'none';
+
+  // Display total rounds played
+  roundsplayedElement.textContent = `Total Rounds Played: ${roundsPlayed}`;
+
+  // Declare overall winner/loser
+  let endMessage = '';
+  if (playerScore > computerScore) {
+      endMessage = "Congratulations, you won against the computer!";
+  } else if (playerScore < computerScore) {
+      endMessage = 'Not so lucky this time, the computer got the upper hand!';
+  } else {
+      endMessage = "It's a tie game! Try again if you want to win";
+  }
+
+  // Display message
+  outcomeElement.textContent = endMessage;
+}
+
 // Reload the page
 document.getElementById("reset").addEventListener("click", function() {
 
   location.reload();
 })
-if (playerScore === 5 && computerScore === 5){ // removes buttons once round 5 is reached
-  document.getElementById('rock').classList.toggle('d-none');
-  document.getElementById('paper').classList.toggle('d-none');
-  document.getElementById('scissor').classList.toggle('d-none');
-}
