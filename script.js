@@ -16,7 +16,7 @@ window.onload = (event) => {
 let playerScore = 0;
 let computerScore = 0;
 let roundsPlayed = 0;
-let totalRounds = 5; // Define the total number of rounds
+let totalRounds = 5; // Shows the total number of rounds
 
 // variables
 const playerScoreElement = document.getElementById('playerScore');
@@ -66,10 +66,10 @@ function playRound(playerChoice) {
 playerScoreElement.textContent = playerScore;
 computerScoreElement.textContent = computerScore;
 
-// Increase rounds played
+// Increase the number of rounds
 roundsPlayed++;
 
-// Display total rounds played
+// Display rounds played
 roundsplayedElement.textContent = `Round ${roundsPlayed}`;
 
 // Check if all rounds played
@@ -87,7 +87,7 @@ function endGame() {
   // Display total rounds played
   roundsplayedElement.textContent = `Total Rounds Played: ${roundsPlayed}`;
 
-  // Declare overall winner/loser
+  // Declare overall winner or loser
   let endMessage = '';
   if (playerScore > computerScore) {
       endMessage = "Congratulations, you won against the computer!";
@@ -97,7 +97,7 @@ function endGame() {
       endMessage = "It's a tie game! Try again if you want to win";
   }
 
-  // Display message
+  // Display the end message
   outcomeElement.textContent = endMessage;
 }
 
