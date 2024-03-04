@@ -16,9 +16,7 @@ header {
     margin: 1em;
     border-radius: 250px;
     background-color: rgba(108, 125, 187, 0.548);
-    box-shadow: 0 4px 5px 0 #050505a4;
     cursor: pointer;
-    transition: background-color 0.5s ease;
 }
 
 .player {
@@ -100,4 +98,14 @@ h3 {
   button {
     border: none;
     border-radius: 100%;
+    box-shadow: 0 4px 5px #050505a4;
+    transition:0.25s;
+}
+button:hover {
+    box-shadow: 0 10px 10px #050505a4;
+    transition:0.25s;
+}
+button:active {
+    box-shadow:none;
+    transition:0.25s;
 }
