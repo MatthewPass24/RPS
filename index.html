@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Poppins:wght@400;500&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -24,9 +27,10 @@
     <div class="container">
         <header>
             <!-- place header here -->
-            <h1><b>Rock, Paper, Scissors!</b></h1>
+            <h1><b>Rock 🪨 Paper 📝 Scissors ✂️</b></h1>
         </header>
         <main>
+<!--Shows player score vs computer score-->
             <h2>Score:</h2>
             <div class='parent'>
                 <div class='child' id="playerScore">
@@ -45,6 +49,7 @@
                     <h2 id="outcome" class="text-center my-2"></h2>
                 </div>
             </div>
+<!--Displays player and comp. choices-->
             <div class="row justify-content-center my-3">
                 <div class="player col-lg-5 col-10" id="box">
                     <div class="title" id="response-text">
@@ -59,16 +64,15 @@
                     <img class="img1" src="images/fist2.png" id="response-image">
                 </div>
             </div>
-            
-            <div class ="option" id="choices">
-                <button id="rock" onclick="playRound('rock')"><img class="img"
-                        src="images/Rock-Flat-icon.png"></button>
+<!--Buttons for the options-->
+            <div class="option" id="choices">
+                <button id="rock" onclick="playRound('rock')"><img class="img" src="images/Rock-Flat-icon.png"></button>
                 <button id="paper" onclick="playRound('paper')"><img class="img"
                         src="images/Page-With-Curl-Emoji.png"></button>
                 <button id="scissors" onclick="playRound('scissors')"><img class="img"
                         src="images/scissors1.png"></button>
             </div>
-            <h2 id="endMessage" class="text-center header"></h2>
+            <h4 id="endMessage" class="text-center header"></h4>
             <div class='parent'>
                 <div class="child">
                     <h2>Restart Game:</h2>
